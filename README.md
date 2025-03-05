@@ -8,7 +8,7 @@
 <h3 align="center">A seamless fusion of creativity and technology.</h3>
 
 <p align="center">
-  <a href="https://github.com/SachinBhardwaj1/FullStackDev_SachinBhardwaj_Portfolio/issues">🐞 Report a Bug</a> &nbsp;|&nbsp;
+  <a href="https://github.com/SachinBhardwaj1/FullStackDev_SachinBhardwaj_Portfolio/issues">🐞 Report a Bug</a>
 </p>
 
 ---
