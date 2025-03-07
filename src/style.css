@@ -751,3 +751,10 @@ button:focus {
   display: inline-block;
   border-bottom: 2px solid #35b618;
 }
+
+/* ✅ Underline for the active section (ONLY when inside the section) */
+.active-section {
+  border-bottom: 3px solid #ff7b00; /* Change color as needed */
+  padding-bottom: 5px;
+  font-weight: bold; /* Optional for better visibility */
+}
