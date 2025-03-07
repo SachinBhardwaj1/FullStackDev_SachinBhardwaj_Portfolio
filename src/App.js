@@ -7,7 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import ResumeNew from "./components/Resume/ResumeNew";
 
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -34,11 +34,6 @@ function App() {
         <About />
         <Projects />
         <ResumeNew />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-
         <Footer />
       </div>
     </Router>
