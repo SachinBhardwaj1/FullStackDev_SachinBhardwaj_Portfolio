@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import ResumeNew from "./components/Resume/ResumeNew";
-
+import ExperienceEducation from "./components/ExperienceEducation/ExperienceEducation";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -26,11 +26,12 @@ function App() {
 
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      {/* <Preloader load={load} /> */}
+      <div className="App" id={load ? "scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
         <Home />
+        <ExperienceEducation />
         <About />
         <Projects />
         <ResumeNew />

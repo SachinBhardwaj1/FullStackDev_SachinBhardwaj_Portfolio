@@ -6,14 +6,18 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
-import { CgGitFork } from "react-icons/cg";
+import { CgGitFork, CgLink } from "react-icons/cg";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillLinkedin,
 } from "react-icons/ai";
+import { FaUserGraduate, FaBriefcase, FaTools } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
+import {
+  AiFillGithub,
+} from "react-icons/ai";
 
 // ✅ Memoized Navbar to prevent unnecessary re-renders
 const NavBar = memo(() => {
@@ -73,16 +77,30 @@ const NavBar = memo(() => {
               <>
                 <Nav.Item>
                   <ScrollLink
+                    to="experience_education"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    activeClass="active-section"
+                    className="nav-link fa-solid fa-user-graduate"
+                    onClick={() => setExpand(false)}
+                  >
+                    <FaBriefcase style={{ marginBottom: "2px" }} /> Experience | <FaUserGraduate style={{ marginBottom: "2px" }} /> Education
+                  </ScrollLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <ScrollLink
                     to="about"
                     spy={true}
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    activeClass="active-section" // ✅ Ensures section is underlined
-                    className="nav-link"
+                    activeClass="active-section"
+                    className="nav-link fa-solid fa-tools"
                     onClick={() => setExpand(false)}
                   >
-                    <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                    <FaTools style={{ marginBottom: "2px" }} /> Skills
                   </ScrollLink>
                 </Nav.Item>
 
@@ -119,17 +137,20 @@ const NavBar = memo(() => {
             ) : (
               <>
                 <Nav.Item>
-                  <RouterLink to="/about" className="nav-link" onClick={() => setExpand(false)}>
-                    <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                  <RouterLink to="/experience_education" className="nav-link" onClick={() => setExpand(false)}>
+                    <CgFileDocument style={{ marginBottom: "2px" }} /> Experience | Education
                   </RouterLink>
                 </Nav.Item>
-
+                <Nav.Item>
+                  <RouterLink to="/about" className="nav-link" onClick={() => setExpand(false)}>
+                    <AiOutlineUser style={{ marginBottom: "2px" }} /> Skills
+                  </RouterLink>
+                </Nav.Item>
                 <Nav.Item>
                   <RouterLink to="/project" className="nav-link" onClick={() => setExpand(false)}>
                     <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
                   </RouterLink>
                 </Nav.Item>
-
                 <Nav.Item>
                   <RouterLink to="/resume" className="nav-link" onClick={() => setExpand(false)}>
                     <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
@@ -140,10 +161,16 @@ const NavBar = memo(() => {
 
             <Nav.Item className="fork-btn">
               <Button href="https://github.com/SachinBhardwaj1" target="_blank" className="fork-btn-inner">
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <CgGitFork style={{ fontSize: "1.5em" }} />{" "}
+                <AiFillGithub style={{ fontSize: "1.5em" }} />
               </Button>
             </Nav.Item>
+            <Nav.Item className="linkedin-btn">
+              <Button href="https://linkedin.com/in/sachinbhardwajus" target="_blank" className="linkedin-btn-inner">
+                  <CgLink style={{ fontSize: "1.5em" }} />{" "}
+                  <AiFillLinkedin style={{ fontSize: "1.5em" }} />
+                </Button>
+              </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

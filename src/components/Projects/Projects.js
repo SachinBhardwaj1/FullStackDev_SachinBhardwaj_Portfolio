@@ -13,20 +13,20 @@ function Projects() {
         <Particle />
         <Container>
           <h1 className="project-heading">
-            My Recent <strong className="purple">Projects </strong>
+            My Recent <strong className="purple"> 💡 Projects </strong>
           </h1>
           <p style={{ color: "white" }}>
             Here are a few projects I've worked on recently.
           </p>
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
-              <ProjectCard
-                imgPath={readnext}
-                title="ReadNext – Your Personalized Book Guide"
-                description="⭐ Refined a Machine Learning filtering model using Cosine Similarity and Sparse Matrix techniques to improve data efficiency and scalability. Built a preprocessing pipeline for 6,000+ records, eliminating delays and maximizing performance."
-                ghLink="https://github.com/SachinBhardwaj1"
-                demoLink=""
-              />
+            <ProjectCard
+              imgPath={readnext}
+              title="ReadNext – Your Personalized Book Guide"
+              description="⭐ Refined a Machine Learning filtering model using Cosine Similarity and Sparse Matrix techniques to improve data efficiency and scalability. Built a preprocessing pipeline for 6,000+ records, eliminating delays and maximizing performance."
+              ghLink="https://github.com/SachinBhardwaj1"
+              demoLink=""
+            />
             </Col>
 
             <Col md={4} className="project-card">

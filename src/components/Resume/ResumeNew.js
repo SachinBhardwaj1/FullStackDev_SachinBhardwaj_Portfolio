@@ -14,39 +14,51 @@ function ResumeNew() {
     <section id="resume">
       <Container fluid className="resume-section">
         <Particle />
-        
-        <Row className="d-flex justify-content-center">
-          <Col xs={12} md={6} className="d-flex justify-content-center">
+        <Container>
+          <h1 className="resume-heading">
+            <strong className="purple"> 💾 Resume</strong>
+          </h1>
+        <Row className="d-flex justify-content-center align-items-center">
+          {/* Resume Preview on the Left */}
+          <Col xs={12} md={6} className="resume-preview d-flex justify-content-center">
+            <iframe
+              src={pdfPreviewUrl}
+              width="100%"
+              height="600px"
+              style={{
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.1)"
+              }}
+              title="Resume Preview"
+            />
+          </Col>
+
+          {/* Text and Download Button on the Right */}
+          <Col xs={12} md={6} className="resume-text text-center text-md-left">
+            <p className="text-white lead">
+            <strong className="purple">HR professionals</strong> and <strong className="purple">Hiring managers</strong> can access a concise and structured version of my resume by downloading the <span className="purple">PDF</span> here.
+            </p>
             <Button
-              href={pdfPreviewUrl}
+              variant="outline-light"
+              href={pdfDownloadUrl}
               target="_blank"
               rel="noopener noreferrer"
+              className="mt-3 px-4 py-2"
               style={{
-                maxWidth: "250px",
-                width: "100%",
-                fontSize: "18px",
-                padding: "10px 20px",
-                marginBottom: "20px",
+                fontSize: "20px",
+                fontWeight: "bold",
+                borderRadius: "100px",
+                alignItems: "center",
+                backgroundColor: "#2196F3",
               }}
             >
               <AiOutlineDownload />
-              &nbsp; View Resume
+              Download Resume
             </Button>
           </Col>
         </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative", marginTop: "20px" }}>
-          <Button
-            variant="primary"
-            href={pdfDownloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp; Download CV
-          </Button>
-        </Row>
+      </Container>
       </Container>
     </section>
   );
