@@ -1,107 +1,51 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-// import { CgC } from "react-icons/cg";
+import { Col, Row, Container } from "react-bootstrap";
 import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-  DiCss3,
-  DiHtml5
+  DiJavascript1, DiReact, DiNodejs, 
+  DiJava, DiAngularSimple, DiDatabase
 } from "react-icons/di";
 import {
-  SiFirebase,
-  SiNextdotjs,
-  SiPostgresql,
-  SiExpress,
-  SiRedux,
-  SiAngular,
-  SiTypescript,
-  SiJira,
-  SiJenkins,
-  SiCypress,
-  SiAmazonaws,
-  SiAzuredevops,
-  SiApachespark,
-  SiGraphql
+  SiFirebase, 
+  SiJira, SiJenkins, 
+  SiApachespark, SiGraphql, SiDocker, SiDevdotto, SiTestinglibrary
 } from "react-icons/si";
+import { FaBrain, FaCodeBranch, FaUsersCog } from "react-icons/fa";
+
+const skills = [
+  { icon: <DiJavascript1 />, title: "Scripting Languages", desc: "JavaScript, TypeScript, HTML, CSS" },
+  { icon: <DiJava/>, title: "Programming Language", desc: "Java , Python"},
+  { icon: <DiReact />, title: "React", desc: "React, Redux, Next.js" },
+  { icon: <DiAngularSimple />, title: "Angular", desc: "Angular, RxJS, HTML5" },
+  { icon: <DiNodejs />, title: "Backend Frameworks", desc: "Node.js, Express.js" },
+  { icon: <DiDatabase />, title: "Databases & ORMs", desc: "Oracle SQL, MySQL, MongoDB, Mongoose" },
+  { icon: <SiDocker />, title: "Cloud & DevOps", desc: "Docker, AWS, Azure, CI/CD Pipelines" },
+  { icon: <SiJira />, title: "Project Management", desc: "Jira, Agile, Scrum" },
+  { icon: <SiJenkins />, title: "Automation & CI/CD", desc: "Jenkins, Azure DevOps" },
+  { icon: <SiTestinglibrary />, title: "Testing & Debugging", desc: "Cypress.io, Jest, Selenium" },
+  { icon: <SiGraphql />, title: "API Development", desc: "RESTful APIs, GraphQL" },
+  { icon: <SiApachespark />, title: "Big Data & Processing", desc: "Apache Spark, Data Pipelines" },
+  { icon: <FaUsersCog />, title: "System Design", desc: "Scalable Architectures & Design Patterns" },
+  { icon: <FaCodeBranch />, title: "Version Control", desc: "Git, GitHub, GitLab" },
+  { icon: <SiFirebase />, title: "Cross-Platform Apps", desc: "Firebase, React Native, PWA" },
+  { icon: <FaBrain />, title: "Problem Solving", desc: "DSA, Algorithms, Logic Building" },
+  { icon: <SiDevdotto />, title: "Open Source Contributions", desc: "GitHub, Community Projects" }
+];
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiExpress />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedux />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAngular />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiJira />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiJenkins />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCypress />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonaws />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAzuredevops />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiApachespark />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGraphql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
-    </Row>
+    <Container fluid className="skills-section">
+      <Row className="justify-content-center">
+        {skills.map((skill, index) => (
+          <Col key={index} xs={12} sm={6} md={4} lg={3} xl={3} className="skill-card">
+            <div className="skill-content">
+              <div className="skill-icon">{skill.icon}</div>
+              <h7 className="skill-title">{skill.title}</h7>
+              <h5 className="skill-desc">{skill.desc}</h5>
+            </div>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 }
 
