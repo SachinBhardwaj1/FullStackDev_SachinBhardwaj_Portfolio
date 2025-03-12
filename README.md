@@ -29,10 +29,10 @@ This dynamic portfolio is powered by an array of modern technologies:
 - 🚀 **Netlify** – Fast and secure deployment
 
 ## ✨ Why This Portfolio Stands Out?
-✅ **Unique UI & UX** – A good design aesthetic.<br/>
-✅ **Fast & Responsive** – Loads quickly across devices.<br/>
-✅ **Showcases My Best Work** – A curated selection of my top projects.<br/>
-✅ **Interactive & Engaging** – A truly immersive experience.<br/>
+ **Unique UI & UX** – A good design aesthetic.<br/>
+ **Fast & Responsive** – Loads quickly across devices.<br/>
+ **Showcases My Best Work** – A curated selection of my top projects.<br/>
+ **Interactive & Engaging** – A truly immersive experience.<br/>
 
 ---
 

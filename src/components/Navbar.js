@@ -19,13 +19,13 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 
-// ✅ Memoized Navbar to prevent unnecessary re-renders
+//  Memoized Navbar to prevent unnecessary re-renders
 const NavBar = memo(() => {
   const [expand, setExpand] = useState(false);
   const [navColour, setNavColour] = useState(false);
   const location = useLocation();
 
-  // ✅ Optimize scroll handler using useCallback
+  //  Optimize scroll handler using useCallback
   const scrollHandler = useCallback(() => {
     setNavColour(window.scrollY >= 20);
   }, []);
@@ -39,7 +39,7 @@ const NavBar = memo(() => {
     <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img src={logo} className="img-fluid logo" alt="brand"/>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -47,7 +47,7 @@ const NavBar = memo(() => {
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            {/* ✅ Home Button Fix - Scrolls to Top When Clicked */}
+            {/*  Home Button Fix - Scrolls to Top When Clicked */}
             <Nav.Item>
               {location.pathname === "/" ? (
                 <ScrollLink
@@ -56,7 +56,7 @@ const NavBar = memo(() => {
                   smooth={true}
                   duration={500}
                   offset={-70}
-                  activeClass="active-section" // ✅ Adds active class when in section
+                  activeClass="active-section" //  Adds active class when in section
                   className="nav-link"
                   onClick={() => {
                     setExpand(false);
@@ -72,7 +72,7 @@ const NavBar = memo(() => {
               )}
             </Nav.Item>
 
-            {/* ✅ Use react-scroll on Home page, react-router elsewhere */}
+            {/*  Use react-scroll on Home page, react-router elsewhere */}
             {location.pathname === "/" ? (
               <>
                 <Nav.Item>

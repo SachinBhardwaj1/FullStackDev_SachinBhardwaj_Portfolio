@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Particle from "./components/Particle";
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <Router>
+      <Particle load={load}/>
       {/* <Preloader load={load} /> */}
       <div className="App" id={load ? "scroll" : "scroll"}>
         <Navbar />

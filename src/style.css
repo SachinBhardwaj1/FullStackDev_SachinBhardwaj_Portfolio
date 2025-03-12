@@ -1,5 +1,4 @@
 html {
-  /* ✅ Updated gradient for a richer, more premium dark theme */
   --section-background-color: linear-gradient(
     background-color: black !important
   );
@@ -8,10 +7,8 @@ html {
     background-color: black !important
   );
 
-  /* ✅ Professional accent color for important text */
-  --imp-text-color: #5ccd4d; /* More balanced than bright green */
-
-  /* ✅ Smooth transition for hover & animations */
+  --imp-text-color: #5ccd4d; 
+  
   --transition-effect: all 0.3s ease-in-out;
 }
 
@@ -25,8 +22,21 @@ html {
   100% { opacity: 1; }
 }
 
+#tsparticles {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1 !important; /* Ensure it's behind all other components */
+}
 
-/* ✅ Section Styling */
+body, html {
+  background-color: transparent !important;
+  color: #ffffff !important; /* ensures consistent white text throughout your app */
+}
+
+/*  Section Styling */
 .section {
   background: var(--section-background-color);
   padding: 80px 20px;
@@ -34,7 +44,7 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* ✅ Header Text */
+/*  Header Text */
 h1, h2, h3 {
   color: white;
   font-weight: 200;
@@ -43,14 +53,14 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
-/* ✅ Important Text */
+/*  Important Text */
 .important-text {
   color: var(--imp-text-color);
   font-weight: 700;
   text-shadow: 0 0 10px rgba(92, 205, 77, 0.4);
 }
 
-/* ✅ Subtle Hover Effects */
+/*  Subtle Hover Effects */
 a, .btn {
   transition: var(--transition-effect);
 }
@@ -60,7 +70,7 @@ a:hover, .btn:hover {
   filter: brightness(1.2);
 }
 
-/* ✅ Card Styling */
+/*  Card Styling */
 .card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -74,7 +84,7 @@ a:hover, .btn:hover {
   transform: translateY(-5px);
 }
 
-/* ✅ Smooth Scroll */
+/*  Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
@@ -88,31 +98,6 @@ button:focus {
 }
 
 /* --------- */
-/*  Preloader */
-/* --------- */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#preloader-none {
-  opacity: 0;
-}
-
-#no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-/* --------- */
 /*Scrollbar   */
 /* --------- */
 
@@ -122,13 +107,13 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: black !important;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
-  border-radius: 12px;
+  background: white !important;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
@@ -621,7 +606,6 @@ button:focus {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
-  /* padding-top: 10px !important; */
 }
 
 /* --------- */
@@ -630,7 +614,7 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 50px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
@@ -949,14 +933,14 @@ button:focus {
   border-bottom: 2px solid #35b618;
 }
 
-/* ✅ Underline for the active section (ONLY when inside the section) */
+/*  Underline for the active section (ONLY when inside the section) */
 .active-section {
   border-bottom: 3px solid #ff7b00; /* Change color as needed */
   padding-bottom: 5px;
   font-weight: bold; /* Optional for better visibility */
 }
 
-/* ✅ Skills Section */
+/*  Skills Section */
 .skills-section {
   text-align: center;
   padding: 50px 20px;
@@ -970,7 +954,7 @@ button:focus {
   margin-bottom: 30px;
 }
 
-/* ✅ Skill Card Styling */
+/*  Skill Card Styling */
 .skill-card {
   background-color: #111; /* Dark background */
   border-radius: 12px;
@@ -991,26 +975,26 @@ button:focus {
   transform: scale(1.05);
 }
 
-/* ✅ Skill Icon */
+/*  Skill Icon */
 .skill-icon {
   font-size: 40px;
   margin-bottom: 10px;
 }
 
-/* ✅ Skill Title */
+/*  Skill Title */
 .skill-title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* ✅ Skill Description */
+/*  Skill Description */
 .skill-description {
   font-size: 13px;
   color: #bbb;
 }
 
-/* ✅ Responsive Layout */
+/*  Responsive Layout */
 @media (max-width: 1200px) {
   .skill-card {
     flex: 1 1 calc(33.33% - 20px); /* 3 columns */
@@ -1030,13 +1014,13 @@ button:focus {
 }
 
 /* ExperienceEducation */
-/* ✅ Section Styling */
+/*  Section Styling */
 .experience-education-section {
   padding: 50px 20px;
   color: white;
 }
 
-/* ✅ Section Titles */
+/*  Section Titles */
 .section-title {
   font-size: 25px;
   font-weight: bold;
@@ -1044,7 +1028,7 @@ button:focus {
   margin-bottom: 20px;
 }
 
-/* ✅ Timeline */
+/*  Timeline */
 .timeline {
   position: relative;
   padding-left: 7px;
@@ -1060,7 +1044,7 @@ button:focus {
   bottom: 0;
 }
 
-/* ✅ Timeline Dots */
+/*  Timeline Dots */
 .timeline-dot {
   width: 12px;
   height: 12px;
@@ -1069,7 +1053,7 @@ button:focus {
   position: absolute;
 }
 
-/* ✅ Timeline Item */
+/*  Timeline Item */
 .timeline-item {
   position: relative;
   margin-bottom: 30px;
@@ -1096,7 +1080,7 @@ button:focus {
   margin-bottom: 5px;
 }
 
-/* ✅ Icons */
+/*  Icons */
 .timeline-content p {
   font-size: 14px;
   margin-bottom: 5px;
@@ -1106,14 +1090,14 @@ button:focus {
   margin-right: 5px;
 }
 
-/* ✅ Duration */
+/*  Duration */
 .exp-duration,
 .edu-duration {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ✅ Logos */
+/*  Logos */
 .company-logo, .edu-logo {
   width: 40px;
   height: auto;

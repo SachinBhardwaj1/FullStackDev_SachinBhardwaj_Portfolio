@@ -37,7 +37,7 @@ function ResumeNew() {
           {/* Text and Download Button on the Right */}
           <Col xs={12} md={6} className="resume-text text-center text-md-left">
             <p className="text-white lead">
-            <strong className="purple">HR professionals</strong> and <strong className="purple">Hiring managers</strong> can access a concise and structured version of my resume by downloading the <span className="purple">PDF</span> here.
+            <strong className="purple">You can download my resume.</strong>
             </p>
             <Button
               variant="outline-light"

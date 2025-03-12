@@ -13,18 +13,17 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage === homeLogo1 ? homeLogo2 : homeLogo1));
-    }, 5000); // Changes every 10 seconds
+    }, 5000); // Image switches every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup function
-  }, []);
+    return () => clearInterval(interval);
+  });
 
   return (
-    <section id="home">
-      <Container fluid className="home-section complete-background-screen">
-        <Particle />
+    <section id="home" style={{ position: "relative", overflow: "hidden" }}>
+      <Particle />
+      <Container fluid className="home-section complete-background-screen" style={{ position: "relative", zIndex: 2 }}>
         <Container className="home-content">
           <Row>
-            {/* Left Section */}
             <Col md={8} className="home-header">
               <h5
                 style={{ paddingBottom: 15, textAlign: "left", display: "flex", alignItems: "center" }}
@@ -36,16 +35,15 @@ function Home() {
                 </span>
               </h5>
 
-              <h1 className="heading-name">
+              <h1 className="heading-name" style={{ color: "#ffffff" }}>
                 I'm <strong className="main-name">Sachin Bhardwaj</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left", color: "#ffffff" }}>
                 <Type />
               </div>
             </Col>
 
-            {/* Right Section - Image with Auto-Switch */}
             <Col md={4} style={{ paddingBottom: 20 }}>
               <img
                 src={currentImage}
