@@ -13,7 +13,6 @@ function ResumeNew() {
   return (
     <section id="resume">
       <Container fluid className="resume-section">
-        <Particle />
         <Container>
           <h1 className="resume-heading">
             <strong className="purple"> 💾 Resume</strong>

@@ -10,7 +10,6 @@ function About() {
   return (
     <section id="about">
       <Container fluid className="about-section">
-        <Particle />
         <Container>
           <h1 className="project-heading">
             <strong className="purple"> 🧑‍💻 Skills </strong>

@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
+  AiFillLinkedin,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -28,7 +28,7 @@ function Footer() {
                 rel="noreferrer"
                 className="icon-colour  home-social-icons"
               >
-                <FaLinkedinIn />
+                <AiFillLinkedin />
               </a>
             </li>
             <li className="social-icons">
@@ -46,10 +46,10 @@ function Footer() {
       </Row>
       <Row>
         <Col md="4" className="footer-license">
-          <h6>MIT license</h6>
+          <h6>Sachin Bhardwaj</h6>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h6><i>© {year} Sachin Bhardwaj</i></h6>
+          <h6><i>© {year} All Right Reserved</i></h6>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons home-about-social-links">
@@ -60,7 +60,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="icon-colour  home-social-icons"
               >
-                <FaLinkedinIn />
+                <AiFillLinkedin />
               </a>
             </li>
             <li className="social-icons home-about-social-links">

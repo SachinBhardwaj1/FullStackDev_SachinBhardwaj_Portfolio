@@ -1,15 +1,67 @@
 html {
   --section-background-color: linear-gradient(
-    background-color: black !important
+    background-color: #36454F !important
   );
 
   --image-gradient: linear-gradient(
-    background-color: black !important
+    background-color: #36454F !important
   );
 
   --imp-text-color: #5ccd4d; 
   
   --transition-effect: all 0.3s ease-in-out;
+}
+
+.fixed-background{
+  background-color: #1e1e1e !important
+}
+
+.golden-name {
+  font-size: 3rem; /* Adjust size */
+  font-weight: bold;
+  background: linear-gradient(45deg, #FFD700, #FFB800, #FF8C00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 
+               0 0 20px rgba(255, 184, 0, 0.6), 
+               0 0 30px rgba(255, 140, 0, 0.4);
+  animation: goldGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes goldGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+                 0 0 20px rgba(255, 184, 0, 0.6),
+                 0 0 30px rgba(255, 140, 0, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 1),
+                 0 0 25px rgba(255, 184, 0, 0.9),
+                 0 0 35px rgba(255, 140, 0, 0.7);
+  }
+}
+
+
+
+.brand-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.waving-hand {
+  display: inline-block;
+  font-size: 2rem; /* Adjust size */
+  animation: wave 2s infinite ease-in-out;
 }
 
 /* Smooth Fade Effect */
@@ -70,6 +122,49 @@ a:hover, .btn:hover {
   filter: brightness(1.2);
 }
 
+.social-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Adjust for spacing */
+}
+
+.social-links {
+  display: flex;
+  gap: 20px; /* Space between icons */
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  background: white; /* Background color */
+  color: #0077b5; /* LinkedIn Blue */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github {
+  color: #333; /* GitHub black */
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+
 /*  Card Styling */
 .card {
   background: rgba(255, 255, 255, 0.05);
@@ -107,7 +202,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black !important;
+  background: #36454F !important;
 }
 
 /* Handle */
@@ -244,7 +339,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: greenyellow;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -353,7 +448,7 @@ button:focus {
 }
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
+  font-size: 1.7em !important;
   color: white !important;
   font-weight: 600 !important;
 }
@@ -361,6 +456,51 @@ button:focus {
   font-size: 2.4em !important;
   color: #35b618 !important;
 }
+
+.text-reveal {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.cursor {
+  color: #0ff; /* Adjust cursor color */
+  font-weight: bold;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.flip-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.static-text {
+  margin-right: 10px;
+}
+
+.flipping-word {
+  display: inline-block;
+  color: #00ffff; /* Neon blue effect */
+  animation: flip 1s ease-in-out;
+}
+
+@keyframes flip {
+  0% { opacity: 0; transform: rotateX(90deg); }
+  50% { opacity: 0.5; transform: rotateX(45deg); }
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
@@ -1053,11 +1193,136 @@ button:focus {
   position: absolute;
 }
 
-/*  Timeline Item */
-.timeline-item {
-  position: relative;
-  margin-bottom: 30px;
+/* Timeline Grid Layout */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 50px;
+  padding: 40px;
+  background: #1e1e1e; /* Dark Background */
+  color: white;
 }
+
+/* Work Experience & Education Sections */
+.timeline-column {
+  width: 100%;
+}
+
+/* Titles for Work & Education */
+.timeline-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00ff99; /* Green for both sections */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Timeline Elements */
+.vertical-timeline-element-content {
+  background: #1e1e1e !important;
+  color: white !important;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 4px 12px rgba(0, 255, 153, 0.3);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: scale(1.03);
+}
+
+/* Timeline Icons */
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  align-items: center; /* Ensures vertical centering */
+  justify-content: flex-start; /* Ensures left alignment */
+  gap: 25px; /* Space between logo and text */
+}
+
+
+/* Company & University Logos */
+.timeline-logo {
+  width: 55px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0; /* Prevents logo from resizing unexpectedly */
+}
+
+/* Work & Education Titles */
+.vertical-timeline-element-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+}
+
+/* Location Text */
+.vertical-timeline-element-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Dates */
+.vertical-timeline-element-date {
+  font-size: 1rem;
+  font-weight: normal;
+  align-items: center !important;
+  color: rgb(180, 180, 180);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .timeline-container {
+      grid-template-columns: 1fr; /* Stacks on smaller screens */
+  }
+}
+
+/* Container for centering and glow effect */
+.glowing-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image with a golden glow */
+.glowing-image {
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.5), 
+              0 0 60px rgba(255, 204, 0, 0.4), 
+              0 0 90px rgba(255, 204, 0, 0.3); /* Golden glow effect */
+  filter: drop-shadow(0px 0px 20px rgba(255, 204, 0, 0.8)); /* Softer glow */
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover effect for more glow intensity */
+.glowing-image:hover {
+  box-shadow: 0 0 40px rgba(255, 204, 0, 0.7), 
+              0 0 80px rgba(255, 204, 0, 0.6), 
+              0 0 120px rgba(255, 204, 0, 0.5);
+}
+
+
 
 .timeline-content {
   /* background: rgba(255, 255, 255, 0.05); */
@@ -1089,6 +1354,48 @@ button:focus {
 .timeline-content p svg {
   margin-right: 5px;
 }
+
+.timeline {
+  position: relative;
+  padding-left: 50px; /* Space for the vertical line */
+  border-left: 2px solid #888; /* Vertical timeline line */
+}
+
+.timeline-item {
+  position: relative;
+  display: flex; /* Make content and icon inline */
+  align-items: center; /* Align icon and logo */
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  color: white;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -40px; /* Align with timeline line */
+  top: 50%;
+  transform: translateY(-50%); /* Perfect vertical centering */
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between logo and content */
+}
+
+.company-logo, .edu-logo {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+  margin-right: 15px;
+}
+
 
 /*  Duration */
 .exp-duration,

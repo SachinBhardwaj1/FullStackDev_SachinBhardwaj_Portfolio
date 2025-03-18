@@ -7,25 +7,16 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { CgGitFork, CgLink } from "react-icons/cg";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser, AiFillLinkedin } from "react-icons/ai";
 import { FaUserGraduate, FaBriefcase, FaTools } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
-import {
-  AiFillGithub,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 
-//  Memoized Navbar to prevent unnecessary re-renders
 const NavBar = memo(() => {
   const [expand, setExpand] = useState(false);
   const [navColour, setNavColour] = useState(false);
   const location = useLocation();
 
-  //  Optimize scroll handler using useCallback
   const scrollHandler = useCallback(() => {
     setNavColour(window.scrollY >= 20);
   }, []);
@@ -36,18 +27,20 @@ const NavBar = memo(() => {
   }, [scrollHandler]);
 
   return (
-    <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
+    <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand"/>
+        <span className="brand-text">{"</sachin-bhardwaj>"}</span>
         </Navbar.Brand>
+        
+        {/* Mobile Menu Toggle */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpand((prev) => !prev)}
         />
+        
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            {/*  Home Button Fix - Scrolls to Top When Clicked */}
             <Nav.Item>
               {location.pathname === "/" ? (
                 <ScrollLink
@@ -56,7 +49,7 @@ const NavBar = memo(() => {
                   smooth={true}
                   duration={500}
                   offset={-70}
-                  activeClass="active-section" //  Adds active class when in section
+                  activeClass="active-section"
                   className="nav-link"
                   onClick={() => {
                     setExpand(false);
@@ -72,65 +65,27 @@ const NavBar = memo(() => {
               )}
             </Nav.Item>
 
-            {/*  Use react-scroll on Home page, react-router elsewhere */}
+            {/* Responsive Navigation Items */}
             {location.pathname === "/" ? (
               <>
                 <Nav.Item>
-                  <ScrollLink
-                    to="experience_education"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active-section"
-                    className="nav-link fa-solid fa-user-graduate"
-                    onClick={() => setExpand(false)}
-                  >
-                    <FaBriefcase style={{ marginBottom: "2px" }} /> Experience | <FaUserGraduate style={{ marginBottom: "2px" }} /> Education
+                  <ScrollLink to="experience_education" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
+                    <FaBriefcase /> Experience | <FaUserGraduate /> Education
                   </ScrollLink>
                 </Nav.Item>
                 <Nav.Item>
-                  <ScrollLink
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active-section"
-                    className="nav-link fa-solid fa-tools"
-                    onClick={() => setExpand(false)}
-                  >
-                    <FaTools style={{ marginBottom: "2px" }} /> Skills
+                  <ScrollLink to="about" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
+                    <FaTools /> Skills
                   </ScrollLink>
                 </Nav.Item>
-
                 <Nav.Item>
-                  <ScrollLink
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active-section"
-                    className="nav-link"
-                    onClick={() => setExpand(false)}
-                  >
-                    <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+                  <ScrollLink to="projects" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
+                    <AiOutlineFundProjectionScreen /> Projects
                   </ScrollLink>
                 </Nav.Item>
-
                 <Nav.Item>
-                  <ScrollLink
-                    to="resume"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active-section"
-                    className="nav-link"
-                    onClick={() => setExpand(false)}
-                  >
-                    <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                  <ScrollLink to="resume" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
+                    <CgFileDocument /> Resume
                   </ScrollLink>
                 </Nav.Item>
               </>
@@ -138,39 +93,38 @@ const NavBar = memo(() => {
               <>
                 <Nav.Item>
                   <RouterLink to="/experience_education" className="nav-link" onClick={() => setExpand(false)}>
-                    <CgFileDocument style={{ marginBottom: "2px" }} /> Experience | Education
+                    <FaBriefcase /> Experience | <FaUserGraduate /> Education
                   </RouterLink>
                 </Nav.Item>
                 <Nav.Item>
                   <RouterLink to="/about" className="nav-link" onClick={() => setExpand(false)}>
-                    <AiOutlineUser style={{ marginBottom: "2px" }} /> Skills
+                    <AiOutlineUser /> Skills
                   </RouterLink>
                 </Nav.Item>
                 <Nav.Item>
                   <RouterLink to="/project" className="nav-link" onClick={() => setExpand(false)}>
-                    <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+                    <AiOutlineFundProjectionScreen /> Projects
                   </RouterLink>
                 </Nav.Item>
                 <Nav.Item>
                   <RouterLink to="/resume" className="nav-link" onClick={() => setExpand(false)}>
-                    <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                    <CgFileDocument /> Resume
                   </RouterLink>
                 </Nav.Item>
               </>
             )}
-
+            
+            {/* Social Buttons */}
             <Nav.Item className="fork-btn">
               <Button href="https://github.com/SachinBhardwaj1" target="_blank" className="fork-btn-inner">
-                <CgGitFork style={{ fontSize: "1.5em" }} />{" "}
-                <AiFillGithub style={{ fontSize: "1.5em" }} />
+                <CgGitFork style={{ fontSize: "1.5em" }} /> <AiFillGithub style={{ fontSize: "1.5em" }} />
               </Button>
             </Nav.Item>
             <Nav.Item className="linkedin-btn">
               <Button href="https://linkedin.com/in/sachinbhardwajus" target="_blank" className="linkedin-btn-inner">
-                  <CgLink style={{ fontSize: "1.5em" }} />{" "}
-                  <AiFillLinkedin style={{ fontSize: "1.5em" }} />
-                </Button>
-              </Nav.Item>
+              <AiFillLinkedin style={{ fontSize: "1.5em", width: "2em" }} />
+              </Button>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

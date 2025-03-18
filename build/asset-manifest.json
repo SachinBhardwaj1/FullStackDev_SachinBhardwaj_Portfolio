@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc6da7ac.css",
-    "main.js": "/static/js/main.6fb90aff.js",
-    "static/media/avatar2.png": "/static/media/avatar2.75f5fa6c03d912ff563c.png",
+    "main.css": "/static/css/main.f8ae9d22.css",
+    "main.js": "/static/js/main.e9b9ffc4.js",
+    "static/media/avatar.png": "/static/media/avatar.acf255d44f541f5d8744.png",
     "static/media/home-main.png": "/static/media/home-main.c21f9a7ececc5ab78d46.png",
-    "static/media/avatar.png": "/static/media/avatar.c4ae1cf253f69fe12b50.png",
     "static/media/Project2_image.png": "/static/media/Project2_image.c1645a96158fe420ec97.png",
     "static/media/Project3_image.png": "/static/media/Project3_image.d3726c67656616dc9aca.png",
     "static/media/CodepathLogo.jpg": "/static/media/CodepathLogo.d1fe181814e3e9295308.jpg",
     "static/media/TCSLogo.jpg": "/static/media/TCSLogo.ce91cc831f97495ae5b1.jpg",
     "index.html": "/index.html",
-    "main.bc6da7ac.css.map": "/static/css/main.bc6da7ac.css.map",
-    "main.6fb90aff.js.map": "/static/js/main.6fb90aff.js.map"
+    "main.f8ae9d22.css.map": "/static/css/main.f8ae9d22.css.map",
+    "main.e9b9ffc4.js.map": "/static/js/main.e9b9ffc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc6da7ac.css",
-    "static/js/main.6fb90aff.js"
+    "static/css/main.f8ae9d22.css",
+    "static/js/main.e9b9ffc4.js"
   ]
 }

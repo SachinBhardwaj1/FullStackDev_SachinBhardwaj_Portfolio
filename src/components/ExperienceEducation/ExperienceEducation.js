@@ -1,32 +1,33 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import  tcslogo  from "../../Assets/TCSLogo.jpg";
-import  accenturelogo  from "../../Assets/AccentureLogo.jpg";
-import  asulogo  from "../../Assets/ASULogo.jpg";
-import  CodepathLogo  from "../../Assets/CodepathLogo.jpg";
-import  kiit  from "../../Assets/kiitlogo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 
+
+import tcslogo from "../../Assets/TCSLogo.jpg";
+import accenturelogo from "../../Assets/AccentureLogo.jpg";
+import asulogo from "../../Assets/ASULogo.jpg";
+import CodepathLogo from "../../Assets/CodepathLogo.jpg";
+import kiit from "../../Assets/kiitlogo.png";
 
 const experienceData = [
   {
     company: "Tata Consultancy Services",
     logo: tcslogo,
-    position: "Full stack developer",
+    position: "Full Stack Developer",
     location: "Bangalore, India",
-    duration: "November 2022 – June 2023",
-    description: "Led React v18 migration, optimized API scalability, and enhanced UI for autonomous kiosks, improving performance, reliability, and user engagement.",
-    keyFocus: "React, API scalability, Root cause analysis, performance optimization",
+    duration: "Nov 2022 – June 2023",
+    description: "Led React v18 migration, optimized API scalability, and enhanced UI for autonomous kiosks.",
+    keyFocus: "React, API scalability, Performance Optimization",
   },
   {
     company: "Accenture",
     logo: accenturelogo,
-    position: "Full stack developer",
+    position: "Full Stack Developer",
     location: "Bangalore, India",
-    duration: "Aug 2020 – November 2022",
-    description:
-      "Worked on system design and optimization for credit union services, enhancing user engagement, statement processing, and API performance.",
-    keyFocus: "Angular, Cypress (Automation Testing), React, Java, Technical Documentation",
+    duration: "Aug 2020 – Nov 2022",
+    description: "Worked on system design and optimization for credit union services.",
+    keyFocus: "Angular, Cypress, React, Java",
   }
 ];
 
@@ -39,7 +40,7 @@ const educationData = [
     duration: "2023 – 2025",
   },
   {
-    institution: "Codepath ORG",
+    institution: "CodePath ORG",
     logo: CodepathLogo,
     degree: "TIP-103 Advanced Technical Interview Prep",
     location: "Arizona, USA (Remote)",
@@ -56,49 +57,60 @@ const educationData = [
 
 const ExperienceEducation = () => {
   return (
-    <section id="experience_education">
-        <Container className="experience-education-section">
-        <Row>
-            {/* Work Experience Column */}
-            <Col md={6}>
-            <h3 className="section-title">💼 Work <strong className="purple">X</strong></h3>
-            <div className="timeline">
-                {experienceData.map((exp, index) => (
-                <div key={index} className="timeline-item">
-                    <div className="timeline-dot"></div>
-                    <div className="timeline-content">
-                    <img src={exp.logo} alt={exp.company} className="company-logo" />
-                    <h4>{exp.company} <span className="exp-duration">({exp.duration})</span></h4>
-                    <h5>{exp.position}</h5>
-                    <p><FaMapMarkerAlt /> {exp.location}</p>
-                    {exp.description && <p className="exp-description">{exp.description}</p>}
-                    <p><strong>Key Focus:</strong> {exp.keyFocus}</p>
-                    </div>
+    <div className="timeline-container">
+      {/* Work Experience Column */}
+      <div className="timeline-column">
+        <h2 className="timeline-title">Work Experience</h2> {/* Removed icon from title */}
+        <VerticalTimeline layout="1-column-left">
+          {experienceData.map((exp, index) => (
+            <VerticalTimelineElement
+              key={index}
+              className="vertical-timeline-element--work"
+              date={exp.duration}
+              iconStyle={{ background: "#00ff99", color: "#fff" }}
+            >
+              <div className="timeline-content">
+                <img src={exp.logo} alt={exp.company} className="timeline-logo" />
+                <div>
+                  <h3 className="vertical-timeline-element-title">{exp.company}</h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {exp.location}
+                  </h4>
+                  <p>{exp.description}</p>
+                  <p><strong>Key Focus:</strong> {exp.keyFocus}</p>
                 </div>
-                ))}
-            </div>
-            </Col>
+              </div>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
 
-            {/* Education Column */}
-            <Col md={6}>
-            <h3 className="section-title">🏛 Education</h3>
-            <div className="timeline">
-                {educationData.map((edu, index) => (
-                <div key={index} className="timeline-item">
-                    <div className="timeline-dot"></div>
-                    <div className="timeline-content">
-                    <img src={edu.logo} alt={edu.institution} className="edu-logo" />
-                    <h4>{edu.institution} <span className="edu-duration">({edu.duration})</span></h4>
-                    <h5>{edu.degree}</h5>
-                    <p><FaMapMarkerAlt /> {edu.location}</p>
-                    </div>
+      {/* Education Column */}
+      <div className="timeline-column">
+        <h2 className="timeline-title">Education</h2> {/* Removed icon from title */}
+        <VerticalTimeline layout="1-column-left">
+          {educationData.map((edu, index) => (
+            <VerticalTimelineElement
+              key={index}
+              className="vertical-timeline-element--education"
+              date={edu.duration}
+              iconStyle={{ background: "#00ff99", color: "#fff" }}
+            >
+              <div className="timeline-content">
+                <img src={edu.logo} alt={edu.institution} className="timeline-logo" />
+                <div>
+                  <h3 className="vertical-timeline-element-title">{edu.institution}</h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {edu.location}
+                  </h4>
+                  <p>{edu.degree}</p>
                 </div>
-                ))}
-            </div>
-            </Col>
-        </Row>
-        </Container>
-    </section>
+              </div>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
+    </div>
   );
 };
 

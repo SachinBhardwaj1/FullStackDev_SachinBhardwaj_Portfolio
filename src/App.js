@@ -26,7 +26,6 @@ function App() {
 
   return (
     <Router>
-      <Particle load={load}/>
       {/* <Preloader load={load} /> */}
       <div className="App" id={load ? "scroll" : "scroll"}>
         <Navbar />

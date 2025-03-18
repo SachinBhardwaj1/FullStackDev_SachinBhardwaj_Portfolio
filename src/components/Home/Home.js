@@ -1,56 +1,87 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo1 from "../../Assets/avatar.png";
-import homeLogo2 from "../../Assets/avatar2.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
-import Type from "./Type";
-import TypeLang from "./Home_Type_Lang";
+import { Home_Type_Lang, Type } from "./Home_Type_Lang";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+} from "react-icons/ai";
+
 
 function Home() {
-  const [currentImage, setCurrentImage] = useState(homeLogo1);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage === homeLogo1 ? homeLogo2 : homeLogo1));
-    }, 5000); // Image switches every 5 seconds
-
-    return () => clearInterval(interval);
-  });
-
   return (
     <section id="home" style={{ position: "relative", overflow: "hidden" }}>
-      <Particle />
-      <Container fluid className="home-section complete-background-screen" style={{ position: "relative", zIndex: 2 }}>
+      <Container
+        fluid
+        className="home-section complete-background-screen"
+        style={{ position: "relative", zIndex: 2 }}
+      >
         <Container className="home-content">
           <Row>
             <Col md={8} className="home-header">
               <h5
-                style={{ paddingBottom: 15, textAlign: "left", display: "flex", alignItems: "center" }}
+                style={{
+                  paddingBottom: 50,
+                  textAlign: "left",
+                  display: "flex",
+                  alignItems: "center",
+                }}
                 className="heading"
               >
-                <span className="namaste" role="img" aria-labelledby="namaste">🙏</span>
+                <span className="waving-hand">✌️</span>
                 <span style={{ marginLeft: "2px" }}>
-                  <TypeLang />
+                  <Home_Type_Lang />
                 </span>
               </h5>
 
-              <h1 className="heading-name" style={{ color: "#ffffff" }}>
-                I'm <strong className="main-name">Sachin Bhardwaj</strong>
+              <h1 className="heading-name">
+                I'm <strong className="golden-name">Sachin Bhardwaj</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left", color: "#ffffff" }}>
+
+
+              <div style={{ padding: 50, textAlign: "left", color: "#ffffff", marginLeft: 100 }}>
                 <Type />
               </div>
+              
+              <div className="social-container">
+                <ul className="social-links">
+                  <li className="social-icons">
+                    <a
+                      href="https://www.linkedin.com/in/sachinbhardwajus/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-icon linkedin"
+                    >
+                      <AiFillLinkedin />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://github.com/sachinbhardwaj1"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-icon github"
+                    >
+                      <AiFillGithub />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
             </Col>
 
             <Col md={4} style={{ paddingBottom: 20 }}>
-              <img
-                src={currentImage}
-                alt="home pic"
-                className="img-fluid fade-in"
-                style={{ maxHeight: "400px", transition: "opacity 1s ease-in-out" }}
-              />
+              <div className="glowing-image-container">
+                <img
+                  src={homeLogo1} // Use only one image
+                  alt="home pic"
+                  className="img-fluid glowing-image"
+                  style={{ maxHeight: "400px" }}
+                />
+              </div>
             </Col>
           </Row>
         </Container>
