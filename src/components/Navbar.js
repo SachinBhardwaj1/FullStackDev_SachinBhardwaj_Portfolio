@@ -4,13 +4,9 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
-import { CgGitFork, CgLink } from "react-icons/cg";
-import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser, AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { FaUserGraduate, FaBriefcase, FaTools } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
-import { AiFillGithub } from "react-icons/ai";
 
 const NavBar = memo(() => {
   const [expand, setExpand] = useState(false);
@@ -30,15 +26,15 @@ const NavBar = memo(() => {
     <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-        <span className="brand-text">{"</sachin-bhardwaj>"}</span>
+          <span className="brand-text">{"</sachin-bhardwaj>"}</span>
         </Navbar.Brand>
-        
+
         {/* Mobile Menu Toggle */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpand((prev) => !prev)}
         />
-        
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Item>
@@ -69,7 +65,7 @@ const NavBar = memo(() => {
             {location.pathname === "/" ? (
               <>
                 <Nav.Item>
-                  <ScrollLink to="experience_education" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
+                  <ScrollLink to="experience-education" spy smooth duration={500} offset={-70} className="nav-link" onClick={() => setExpand(false)}>
                     <FaBriefcase /> Experience | <FaUserGraduate /> Education
                   </ScrollLink>
                 </Nav.Item>
@@ -92,7 +88,7 @@ const NavBar = memo(() => {
             ) : (
               <>
                 <Nav.Item>
-                  <RouterLink to="/experience_education" className="nav-link" onClick={() => setExpand(false)}>
+                  <RouterLink to="/experience-education" className="nav-link" onClick={() => setExpand(false)}>
                     <FaBriefcase /> Experience | <FaUserGraduate /> Education
                   </RouterLink>
                 </Nav.Item>
@@ -113,9 +109,9 @@ const NavBar = memo(() => {
                 </Nav.Item>
               </>
             )}
-            
+
             {/* Social Buttons */}
-            <Nav.Item className="fork-btn">
+            {/* <Nav.Item className="fork-btn">
               <Button href="https://github.com/SachinBhardwaj1" target="_blank" className="fork-btn-inner">
                 <CgGitFork style={{ fontSize: "1.5em" }} /> <AiFillGithub style={{ fontSize: "1.5em" }} />
               </Button>
@@ -124,7 +120,7 @@ const NavBar = memo(() => {
               <Button href="https://linkedin.com/in/sachinbhardwajus" target="_blank" className="linkedin-btn-inner">
               <AiFillLinkedin style={{ fontSize: "1.5em", width: "2em" }} />
               </Button>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

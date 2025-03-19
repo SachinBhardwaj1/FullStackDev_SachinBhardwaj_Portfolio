@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 
-
 import tcslogo from "../../Assets/TCSLogo.jpg";
 import accenturelogo from "../../Assets/AccentureLogo.jpg";
 import asulogo from "../../Assets/ASULogo.jpg";
@@ -57,10 +56,9 @@ const educationData = [
 
 const ExperienceEducation = () => {
   return (
-    <div className="timeline-container">
-      {/* Work Experience Column */}
+    <section id="experience-education" className="timeline-container">
       <div className="timeline-column">
-        <h2 className="timeline-title">Work Experience</h2> {/* Removed icon from title */}
+        <h2 className="timeline-title">👔 Work X</h2>
         <VerticalTimeline layout="1-column-left">
           {experienceData.map((exp, index) => (
             <VerticalTimelineElement
@@ -87,7 +85,7 @@ const ExperienceEducation = () => {
 
       {/* Education Column */}
       <div className="timeline-column">
-        <h2 className="timeline-title">Education</h2> {/* Removed icon from title */}
+        <h2 className="timeline-title">🎓 Education</h2>
         <VerticalTimeline layout="1-column-left">
           {educationData.map((edu, index) => (
             <VerticalTimelineElement
@@ -110,7 +108,7 @@ const ExperienceEducation = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </div>
+    </section>
   );
 };
 

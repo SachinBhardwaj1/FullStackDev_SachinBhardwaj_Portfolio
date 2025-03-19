@@ -1,19 +1,19 @@
 import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import {
-  DiJavascript1, DiReact, DiNodejs, 
+  DiJavascript1, DiReact, DiNodejs,
   DiJava, DiAngularSimple, DiDatabase
 } from "react-icons/di";
 import {
-  SiFirebase, 
-  SiJira, SiJenkins, 
+  SiFirebase,
+  SiJira, SiJenkins,
   SiApachespark, SiGraphql, SiDocker, SiDevdotto, SiTestinglibrary
 } from "react-icons/si";
 import { FaBrain, FaCodeBranch, FaUsersCog } from "react-icons/fa";
 
 const skills = [
   { icon: <DiJavascript1 />, title: "Scripting Languages", desc: "JavaScript, TypeScript, HTML, CSS" },
-  { icon: <DiJava/>, title: "Programming Language", desc: "Java , Python"},
+  { icon: <DiJava />, title: "Programming Language", desc: "Java , Python" },
   { icon: <DiReact />, title: "React", desc: "React, Redux, Next.js" },
   { icon: <DiAngularSimple />, title: "Angular", desc: "Angular, RxJS, HTML5" },
   { icon: <DiNodejs />, title: "Backend Frameworks", desc: "Node.js, Express.js" },

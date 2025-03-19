@@ -14,14 +14,14 @@ function Footer() {
         <Col md={12} className="home-about-social">
           <h2>
             <p>
-              <span className="purple">Open</span> to <span className="purple">software development</span> opportunities—let’s connect!
+              <span className="text-highlight">Open</span> to <span className="text-highlight">software development</span> opportunities—let’s connect!
             </p>
           </h2>
           <div className="handshake-container">
             <img src="/handshake.gif" alt="Handshake" className="handshake-image" />
           </div>
           <ul className="home-about-social-links">
-          <li className="social-icons">
+            <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/sachinbhardwajus/"
                 target="_blank"
@@ -53,10 +53,10 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons home-about-social-links">
-          <li className="social-icons">
+            <li className="social-icons">
               <a
                 href="https://linkedin.com/in/sachinbhardwajus"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="icon-colour  home-social-icons"
               >
@@ -66,7 +66,7 @@ function Footer() {
             <li className="social-icons home-about-social-links">
               <a
                 href="https://github.com/SachinBhardwaj1"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="icon-colour  home-social-icons"
               >

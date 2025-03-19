@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo1 from "../../Assets/avatar.png";
-import Particle from "../Particle";
 import Home2 from "./Home2";
-import { Home_Type_Lang, Type } from "./Home_Type_Lang";
+import { WelcomeText, RoleTypes } from "./HomeTypeLang";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -32,20 +31,20 @@ function Home() {
               >
                 <span className="waving-hand">✌️</span>
                 <span style={{ marginLeft: "2px" }}>
-                  <Home_Type_Lang />
+                  <WelcomeText />
                 </span>
               </h5>
 
               <h1 className="heading-name">
-                I'm <strong className="golden-name">Sachin Bhardwaj</strong>
+                I'm <strong className="cyan-name">Sachin Bhardwaj</strong>
               </h1>
 
 
 
               <div style={{ padding: 50, textAlign: "left", color: "#ffffff", marginLeft: 100 }}>
-                <Type />
+                <RoleTypes />
               </div>
-              
+
               <div className="social-container">
                 <ul className="social-links">
                   <li className="social-icons">
@@ -70,7 +69,7 @@ function Home() {
                   </li>
                 </ul>
               </div>
-              
+
             </Col>
 
             <Col md={4} style={{ paddingBottom: 20 }}>

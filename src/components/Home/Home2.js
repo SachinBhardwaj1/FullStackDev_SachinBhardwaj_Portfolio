@@ -17,11 +17,11 @@ function Home2() {
 
         {/* Bio Content Section */}
         <Col md={8} className="bio-description">
-          <h1 className="bio-title">My <span className="purple">📜 Bio</span></h1>
+          <h1 className="bio-title">My <span className="text-highlight">📜 Bio</span></h1>
           <p className="bio-body">
             I'm a <b className="highlight">Full Stack Developer</b>, Tech Enthusiast, and Problem Solver passionate about building scalable applications and crafting seamless user experiences.
             <br /><br />
-            I love working with <b className="highlight">JavaScript, TypeScript, React, Angular</b> & backend tech like Node.js & GraphQL. 
+            I love working with <b className="highlight">JavaScript, TypeScript, React, Angular</b> & backend tech like Node.js & GraphQL.
             Constantly learning, with <b className="highlight">Google</b> as my teacher and my <b className="highlight">code editor</b> as my notebook.
           </p>
 
@@ -37,13 +37,13 @@ function Home2() {
 
           {/* Call to Action */}
           <p className="bio-cta">
-            I care deeply about <b className="highlight">user experience</b>, product feedback, and delivering features that matter.  
+            I care deeply about <b className="highlight">user experience</b>, product feedback, and delivering features that matter.
             <br /><br />
             <b>I’m looking for new opportunities.</b> Let’s talk!
           </p>
-          
-          <p className="bio-footer" style={{textAlign: "center"}}>
-            📩 <b>Connect with me:</b> <a href="https://www.linkedin.com/in/sachinbhardwajus/" target="_blank" rel="noopener noreferrer" className="bio-link">LinkedIn</a>  
+
+          <p className="bio-footer" style={{ textAlign: "center" }}>
+            📩 <b>Connect with me:</b> <a href="https://www.linkedin.com/in/sachinbhardwajus/" target="_blank" rel="noopener noreferrer" className="bio-link">LinkedIn</a>
           </p>
         </Col>
       </Row>

@@ -1,47 +1,27 @@
 html {
-  --section-background-color: linear-gradient(
-    background-color: #36454F !important
-  );
+  --section-background-color: linear-gradient(background-color: #36454F !important);
 
-  --image-gradient: linear-gradient(
-    background-color: #36454F !important
-  );
+  --image-gradient: linear-gradient(background-color: #36454F !important);
 
-  --imp-text-color: #5ccd4d; 
-  
+  --imp-text-color: #5ccd4d;
+
   --transition-effect: all 0.3s ease-in-out;
 }
 
-.fixed-background{
+.fixed-background {
   background-color: #1e1e1e !important
 }
 
-.golden-name {
-  font-size: 3rem; /* Adjust size */
+.text-highlight {
+  color: #5ccd4d;
+}
+
+.cyan-name {
+  font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #FFD700, #FFB800, #FF8C00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 
-               0 0 20px rgba(255, 184, 0, 0.6), 
-               0 0 30px rgba(255, 140, 0, 0.4);
-  animation: goldGlow 1.5s infinite alternate ease-in-out;
+  display: inline-block;
+  color: #00ffff;
 }
-
-@keyframes goldGlow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
-                 0 0 20px rgba(255, 184, 0, 0.6),
-                 0 0 30px rgba(255, 140, 0, 0.4);
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 215, 0, 1),
-                 0 0 25px rgba(255, 184, 0, 0.9),
-                 0 0 35px rgba(255, 140, 0, 0.7);
-  }
-}
-
-
 
 .brand-text {
   font-size: 1rem;
@@ -51,27 +31,45 @@ html {
 }
 
 @keyframes wave {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-15deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .waving-hand {
   display: inline-block;
-  font-size: 2rem; /* Adjust size */
+  font-size: 2rem;
   animation: wave 2s infinite ease-in-out;
 }
 
-/* Smooth Fade Effect */
 .fade-in {
   animation: fadeInOut 1s ease-in-out;
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #tsparticles {
@@ -80,15 +78,15 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1 !important; /* Ensure it's behind all other components */
+  z-index: -1 !important;
 }
 
-body, html {
+body,
+html {
   background-color: transparent !important;
-  color: #ffffff !important; /* ensures consistent white text throughout your app */
+  color: #ffffff !important;
 }
 
-/*  Section Styling */
 .section {
   background: var(--section-background-color);
   padding: 80px 20px;
@@ -96,8 +94,9 @@ body, html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/*  Header Text */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: white;
   font-weight: 200;
   text-align: center;
@@ -105,33 +104,27 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
-/*  Important Text */
-.important-text {
-  color: var(--imp-text-color);
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(92, 205, 77, 0.4);
-}
-
-/*  Subtle Hover Effects */
-a, .btn {
+a,
+.btn {
   transition: var(--transition-effect);
 }
 
-a:hover, .btn:hover {
+a:hover,
+.btn:hover {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
 
 .social-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin-top: 20px; /* Adjust for spacing */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .social-links {
   display: flex;
-  gap: 20px; /* Space between icons */
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
@@ -150,13 +143,13 @@ a:hover, .btn:hover {
   height: 50px;
   border-radius: 50%;
   font-size: 24px;
-  background: white; /* Background color */
-  color: #0077b5; /* LinkedIn Blue */
+  background: white;
+  color: #0077b5;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .github {
-  color: #333; /* GitHub black */
+  color: #333;
 }
 
 .social-icon:hover {
@@ -164,8 +157,6 @@ a:hover, .btn:hover {
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-
-/*  Card Styling */
 .card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -179,13 +170,8 @@ a:hover, .btn:hover {
   transform: translateY(-5px);
 }
 
-/*  Smooth Scroll */
 html {
   scroll-behavior: smooth;
-}
-
-.purple {
-  color: var(--imp-text-color) !important;
 }
 
 button:focus {
@@ -291,10 +277,12 @@ button:focus {
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -312,12 +300,6 @@ button:focus {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -354,10 +336,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 1.2s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.2s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -365,24 +351,33 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
@@ -392,9 +387,11 @@ button:focus {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -452,6 +449,7 @@ button:focus {
   color: white !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #35b618 !important;
@@ -465,15 +463,24 @@ button:focus {
 }
 
 .cursor {
-  color: #0ff; /* Adjust cursor color */
+  color: #0ff;
+  /* Adjust cursor color */
   font-weight: bold;
   animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -491,38 +498,31 @@ button:focus {
 
 .flipping-word {
   display: inline-block;
-  color: #00ffff; /* Neon blue effect */
+  color: #00ffff;
+  /* Neon blue effect */
   animation: flip 1s ease-in-out;
 }
 
 @keyframes flip {
-  0% { opacity: 0; transform: rotateX(90deg); }
-  50% { opacity: 0.5; transform: rotateX(45deg); }
-  100% { opacity: 1; transform: rotateX(0deg); }
-}
-
-
-@media (max-width: 767px) {
-  .Typewriter__wrapper {
-    font-size: 1.4em !important;
-    font-weight: 500 !important;
-    position: absolute !important;
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
   }
-  .Typewriter__cursor {
-    display: none !important;
+
+  50% {
+    opacity: 0.5;
+    transform: rotateX(45deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
   }
 }
 
 .myAvtar {
   justify-content: center !important;
   padding-top: 9em !important;
-}
-
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
-  }
 }
 
 .home-about-section {
@@ -609,7 +609,7 @@ button:focus {
   background-image: var(--section-background-color) !important;
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
 
 .footer-license {
@@ -617,6 +617,7 @@ button:focus {
   color: white !important;
   margin-top: 2rem !important;
 }
+
 .footer-copywright {
   text-align: center !important;
   color: white !important;
@@ -628,30 +629,13 @@ button:focus {
   text-align: right !important;
 }
 
-@media (max-width: 767px) {
-  .footer-license {
-    text-align: left !important;
-    color: white !important;
-    margin-top: 2rem !important;
-  }
-
-  .footer-copywright {
-    text-align: center !important;
-    color: white !important;
-    margin-top: 2rem !important;
-  }
-
-  .footer-body {
-    text-align: right !important;
-  }
-}
-
 .footer h3 {
   font-size: 1em;
   color: white !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   /* margin-top: 0.5em !important; */
   margin-bottom: 0.5em !important;
@@ -661,6 +645,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -671,7 +656,8 @@ button:focus {
   background-image: var(--section-background-color) !important;
 }
 
-.project-card, .contact-card{
+.project-card,
+.contact-card {
   padding-top: 50px !important;
   padding-bottom: 10px !important;
   padding-left: 25px !important;
@@ -681,7 +667,8 @@ button:focus {
   height: 100%;
 }
 
-.project-card-view, .contact-card-view {
+.project-card-view,
+.contact-card-view {
   box-shadow: 0 4px 5px 3px rgba(42, 108, 43, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
@@ -689,21 +676,28 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures content at top, button at bottom */
+  justify-content: space-between;
+  /* Ensures content at top, button at bottom */
   align-items: center;
-  height: 100%; /* Enforces full height */
+  height: 100%;
+  /* Enforces full height */
   padding-bottom: 15px;
 }
-.project-card-view:hover, .contact-card-view:hover, .certification-card-view:hover {
+
+.project-card-view:hover,
+.contact-card-view:hover,
+.certification-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
 .button-container {
-  margin-top: auto; /* Pushes the button to the bottom */
+  margin-top: auto;
+  /* Pushes the button to the bottom */
   display: flex;
-  justify-content: center; /* Centers button */
+  justify-content: center;
+  /* Centers button */
   padding-bottom: 15px;
 }
 
@@ -738,10 +732,12 @@ button:focus {
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
@@ -775,17 +771,12 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
-@media (max-width: 767px) {
-  .tech-icons {
-    margin: 10px !important;
-  }
-}
-
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -801,12 +792,6 @@ button:focus {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
-}
-
-@media (max-width: 767px) {
-  .about-img {
-    padding-top: 0 !important;
-  }
 }
 
 /* 🔥 General Styling */
@@ -867,8 +852,8 @@ button:focus {
   color: white;
 }
 
-/* 🛠 Responsive Grid Layout */
-@media (max-width: 1200px) {
+🛠 Responsive Grid Layout
+/* @media (max-width: 1200px) {
   .tech-card {
     width: 22%;
   }
@@ -890,7 +875,7 @@ button:focus {
   .tech-card {
     width: 90%;
   }
-}
+} */
 
 /* --------- */
 /* Resume */
@@ -925,17 +910,7 @@ button:focus {
   padding-left: 80px !important;
 }
 
-@media (max-width: 767px) {
-  .resume-left {
-    padding-right: 15px !important;
-    padding-left: 15px !important;
-  }
 
-  .resume-right {
-    padding-right: 15px !important;
-    padding-left: 15px !important;
-  }
-}
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -1029,21 +1004,25 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
-.fork-btn, .linkedin-btn {
+.fork-btn,
+.linkedin-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
 }
 
-.fork-btn-inner, .linkedin-btn-inner {
+.fork-btn-inner,
+.linkedin-btn-inner {
   line-height: 1.4em !important;
   background-color: #333 !important;
   padding: 0.25rem 1.1rem !important;
@@ -1052,32 +1031,37 @@ button:focus {
 }
 
 .linkedin-btn-inner {
-    background-color: rgb(10, 102, 194) !important;
+  background-color: rgb(10, 102, 194) !important;
 }
 
-.fork-btn-inner:hover, .linkedin-btn-inner:hover {
+.fork-btn-inner:hover,
+.linkedin-btn-inner:hover {
   transform: translateY(-2px) !important;
   background-color: #6cc644 !important;
 }
-.fork-btn-inner::after, .linkedin-btn-inner::after {
+
+.fork-btn-inner::after,
+.linkedin-btn-inner::after {
   display: none !important;
 }
 
-.svg_style{
+.svg_style {
   fill: none;
   background: transparent !important;
 }
 
-.line{
+.line {
   display: inline-block;
   border-bottom: 2px solid #35b618;
 }
 
 /*  Underline for the active section (ONLY when inside the section) */
 .active-section {
-  border-bottom: 3px solid #ff7b00; /* Change color as needed */
+  border-bottom: 3px solid #ff7b00;
+  /* Change color as needed */
   padding-bottom: 5px;
-  font-weight: bold; /* Optional for better visibility */
+  font-weight: bold;
+  /* Optional for better visibility */
 }
 
 /*  Skills Section */
@@ -1096,7 +1080,8 @@ button:focus {
 
 /*  Skill Card Styling */
 .skill-card {
-  background-color: #111; /* Dark background */
+  background-color: #111;
+  /* Dark background */
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -1104,7 +1089,8 @@ button:focus {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
   margin: 10px;
-  min-height: 150px; /* Ensure equal height for all cards */
+  min-height: 150px;
+  /* Ensure equal height for all cards */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1137,19 +1123,15 @@ button:focus {
 /*  Responsive Layout */
 @media (max-width: 1200px) {
   .skill-card {
-    flex: 1 1 calc(33.33% - 20px); /* 3 columns */
+    flex: 1 1 calc(33.33% - 20px);
+    /* 3 columns */
   }
 }
 
 @media (max-width: 992px) {
   .skill-card {
-    flex: 1 1 calc(50% - 20px); /* 2 columns */
-  }
-}
-
-@media (max-width: 768px) {
-  .skill-card {
-    flex: 1 1 calc(100% - 20px); /* 1 column */
+    flex: 1 1 calc(50% - 20px);
+    /* 2 columns */
   }
 }
 
@@ -1195,11 +1177,11 @@ button:focus {
 
 /* Timeline Grid Layout */
 .timeline-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 50px;
-  padding: 40px;
-  background: #1e1e1e; /* Dark Background */
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two equal columns */
+  gap: 125px;
+  padding: 50px;
   color: white;
 }
 
@@ -1214,7 +1196,8 @@ button:focus {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #00ff99; /* Green for both sections */
+  color: #00ff99;
+  /* Green for both sections */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1225,11 +1208,10 @@ button:focus {
 .vertical-timeline-element-content {
   background: #1e1e1e !important;
   color: white !important;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 2px 4px 12px rgba(0, 255, 153, 0.3);
+  border-radius: 100px;
+  padding: 33px;
+  box-shadow: 8px 8px 8px rgba(0, 255, 153, 0.4);
   transition: transform 0.3s ease-in-out;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -1251,9 +1233,12 @@ button:focus {
 /* Timeline Content */
 .timeline-content {
   display: flex;
-  align-items: center; /* Ensures vertical centering */
-  justify-content: flex-start; /* Ensures left alignment */
-  gap: 25px; /* Space between logo and text */
+  align-items: center;
+  /* Ensures vertical centering */
+  justify-content: flex-start;
+  /* Ensures left alignment */
+  gap: 25px;
+  /* Space between logo and text */
 }
 
 
@@ -1262,7 +1247,8 @@ button:focus {
   width: 55px;
   height: auto;
   border-radius: 5px;
-  flex-shrink: 0; /* Prevents logo from resizing unexpectedly */
+  flex-shrink: 0;
+  /* Prevents logo from resizing unexpectedly */
 }
 
 /* Work & Education Titles */
@@ -1293,7 +1279,8 @@ button:focus {
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .timeline-container {
-      grid-template-columns: 1fr; /* Stacks on smaller screens */
+    grid-template-columns: 1fr;
+    /* Stacks on smaller screens */
   }
 }
 
@@ -1308,18 +1295,20 @@ button:focus {
 /* Image with a golden glow */
 .glowing-image {
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(255, 204, 0, 0.5), 
-              0 0 60px rgba(255, 204, 0, 0.4), 
-              0 0 90px rgba(255, 204, 0, 0.3); /* Golden glow effect */
-  filter: drop-shadow(0px 0px 20px rgba(255, 204, 0, 0.8)); /* Softer glow */
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.5),
+    0 0 60px rgba(255, 204, 0, 0.4),
+    0 0 90px rgba(255, 204, 0, 0.3);
+  /* Golden glow effect */
+  filter: drop-shadow(0px 0px 20px rgba(255, 204, 0, 0.8));
+  /* Softer glow */
   transition: all 0.4s ease-in-out;
 }
 
 /* Hover effect for more glow intensity */
 .glowing-image:hover {
-  box-shadow: 0 0 40px rgba(255, 204, 0, 0.7), 
-              0 0 80px rgba(255, 204, 0, 0.6), 
-              0 0 120px rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 40px rgba(255, 204, 0, 0.7),
+    0 0 80px rgba(255, 204, 0, 0.6),
+    0 0 120px rgba(255, 204, 0, 0.5);
 }
 
 
@@ -1357,14 +1346,18 @@ button:focus {
 
 .timeline {
   position: relative;
-  padding-left: 50px; /* Space for the vertical line */
-  border-left: 2px solid #888; /* Vertical timeline line */
+  padding-left: 50px;
+  /* Space for the vertical line */
+  border-left: 2px solid #888;
+  /* Vertical timeline line */
 }
 
 .timeline-item {
   position: relative;
-  display: flex; /* Make content and icon inline */
-  align-items: center; /* Align icon and logo */
+  display: flex;
+  /* Make content and icon inline */
+  align-items: center;
+  /* Align icon and logo */
   padding: 20px;
   margin-bottom: 30px;
   background: #1e1e1e;
@@ -1374,9 +1367,11 @@ button:focus {
 
 .timeline-icon {
   position: absolute;
-  left: -40px; /* Align with timeline line */
+  left: -40px;
+  /* Align with timeline line */
   top: 50%;
-  transform: translateY(-50%); /* Perfect vertical centering */
+  transform: translateY(-50%);
+  /* Perfect vertical centering */
   background: #1e1e1e;
   padding: 10px;
   border-radius: 50%;
@@ -1387,11 +1382,14 @@ button:focus {
 .timeline-content {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between logo and content */
+  gap: 15px;
+  /* Space between logo and content */
 }
 
-.company-logo, .edu-logo {
-  width: 60px; /* Adjust logo size */
+.company-logo,
+.edu-logo {
+  width: 60px;
+  /* Adjust logo size */
   height: auto;
   margin-right: 15px;
 }
@@ -1405,7 +1403,8 @@ button:focus {
 }
 
 /*  Logos */
-.company-logo, .edu-logo {
+.company-logo,
+.edu-logo {
   width: 40px;
   height: auto;
   margin-bottom: 10px;
@@ -1436,7 +1435,8 @@ button:focus {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: left;
   position: relative;
-  min-height: 130px; /* Ensures equal height */
+  min-height: 130px;
+  /* Ensures equal height */
 }
 
 .skill-card:hover {
@@ -1468,7 +1468,7 @@ button:focus {
   margin-top: 5px;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .skill-card {
     width: 22%;
   }
@@ -1484,13 +1484,13 @@ button:focus {
   .skill-card {
     width: 45%;
   }
-}
+} */
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .skill-card {
     width: 90%;
   }
-}
+} */
 
 /** Bio Section **/
 
@@ -1511,7 +1511,8 @@ button:focus {
 }
 
 .highlight {
-  color: #90EE90; /* Light Green Neon */
+  color: #90EE90;
+  /* Light Green Neon */
 }
 
 .bio-body {
@@ -1600,28 +1601,133 @@ button:focus {
   .bio-section {
     padding: 50px 5%;
   }
+
   .bio-title {
     font-size: 2em;
   }
+
   .bio-body {
     font-size: 1.1em;
   }
+
   .bio-subtitle {
     font-size: 1.6em;
   }
+
   .bio-list li {
     font-size: 1em;
   }
+
   .bio-cta {
     font-size: 1.1em;
   }
 }
 
+.glowing-title {
+  color: #00ffff; /* Cyan text color */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.glowing-title:hover {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 
+               0 0 20px rgba(0, 255, 255, 0.6), 
+               0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.project-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.fixed-project-image {
+  width: 100%;  /* Ensures the image fits the container */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Crops the image without distortion */
+  border-radius: 8px; /* Optional: Adds smooth edges */
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem !important;
+    font-size: 1.4rem !important;
+    background-color: #181a27 !important;
+  }
+
+  .navbar-nav .nav-item a::after {
+    display: none !important;
+  }
+
+  .nav-link {
+    padding: 0.7rem 1rem !important;
+  }
+
+  .Typewriter__wrapper {
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+    position: absolute !important;
+  }
+
+  .Typewriter__cursor {
+    display: none !important;
+  }
+
+  .myAvtar {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+
+  .footer-license {
+    text-align: left !important;
+    color: white !important;
+    margin-top: 2rem !important;
+  }
+
+  .footer-copywright {
+    text-align: center !important;
+    color: white !important;
+    margin-top: 2rem !important;
+  }
+
+  .footer-body {
+    text-align: right !important;
+  }
+
+  .tech-icons {
+    margin: 10px !important;
+  }
+
+  .about-img {
+    padding-top: 0 !important;
+  }
+
+  .tech-card {
+    width: 22%;
+  }
+
+  .resume-left {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .resume-right {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .skill-card {
+    flex: 1 1 calc(100% - 20px);
+    /* 1 column */
+  }
+
   .bio-avatar {
     text-align: center;
     margin-bottom: 20px;
   }
+
   .bio-avatar img {
     width: 70%;
   }

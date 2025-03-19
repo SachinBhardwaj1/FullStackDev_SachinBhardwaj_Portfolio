@@ -1,5 +1,5 @@
 <h1 align="center">
-  🚀 My Digital Portfolio 1.0 🚀<br/>
+  🚀 My Digital Portfolio 2.0 🚀<br/>
   <a href="https://sachinbhardwaj.netlify.app" target="_blank">Visit Now</a>
 </h1>
 

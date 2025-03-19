@@ -1,6 +1,5 @@
 import React from "react";
-import { Container} from "react-bootstrap";
-import Particle from "../Particle";
+import { Container } from "react-bootstrap";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
@@ -12,19 +11,19 @@ function About() {
       <Container fluid className="about-section">
         <Container>
           <h1 className="project-heading">
-            <strong className="purple"> 🧑‍💻 Skills </strong>
+            <strong className="text-highlight"> 🧑‍💻 Skills </strong>
           </h1>
 
           <Techstack />
 
           <h1 className="project-heading">
-            <strong className="purple">🖥 Software Tools</strong>
+            <strong className="text-highlight">🖥 Software Tools</strong>
           </h1>
           <Toolstack />
 
           <Github />
-          
-          <LeetcodeAchievements username="sachinbhardwaj"/>
+
+          <LeetcodeAchievements username="sachinbhardwaj" />
         </Container>
       </Container>
     </section>
