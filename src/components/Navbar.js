@@ -26,7 +26,7 @@ const NavBar = memo(() => {
     <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <span className="brand-text">{"</sachin-bhardwaj>"}</span>
+          <span className="brand-text">{"< sachin-bhardwaj/ >"}</span>
         </Navbar.Brand>
 
         {/* Mobile Menu Toggle */}

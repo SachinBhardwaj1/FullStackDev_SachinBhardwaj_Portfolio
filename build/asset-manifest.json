@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6e98baf4.css",
-    "main.js": "/static/js/main.40f7617c.js",
+    "main.js": "/static/js/main.a6515f95.js",
     "static/media/avatar.png": "/static/media/avatar.acf255d44f541f5d8744.png",
     "static/media/home-main.png": "/static/media/home-main.c21f9a7ececc5ab78d46.png",
     "static/media/cultural.png": "/static/media/cultural.a651592d98338d85c0fd.png",
@@ -10,14 +10,15 @@
     "static/media/aws.png": "/static/media/aws.022dd86f8c4864d158f7.png",
     "static/media/mongo.jpg": "/static/media/mongo.836f9307fef45e6ef17c.jpg",
     "static/media/Project3_image.png": "/static/media/Project3_image.d3726c67656616dc9aca.png",
+    "static/media/loadbalancer.png": "/static/media/loadbalancer.cd9b42ca6a96bb77c2b4.png",
     "static/media/CodepathLogo.jpg": "/static/media/CodepathLogo.d1fe181814e3e9295308.jpg",
     "static/media/TCSLogo.jpg": "/static/media/TCSLogo.ce91cc831f97495ae5b1.jpg",
     "index.html": "/index.html",
     "main.6e98baf4.css.map": "/static/css/main.6e98baf4.css.map",
-    "main.40f7617c.js.map": "/static/js/main.40f7617c.js.map"
+    "main.a6515f95.js.map": "/static/js/main.a6515f95.js.map"
   },
   "entrypoints": [
     "static/css/main.6e98baf4.css",
-    "static/js/main.40f7617c.js"
+    "static/js/main.a6515f95.js"
   ]
 }
