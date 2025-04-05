@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import React from "react";
 
-const GOOGLE_DRIVE_FILE_ID = "1GWwKcAV_U8-K4TPdDJVedtww_N1mdvAD";
+const GOOGLE_DRIVE_FILE_ID = "1PfRuRKx7gOdeBhWXYd_Gex5aZIDIzSsb";
 
 const pdfPreviewUrl = `https://drive.google.com/file/d/${GOOGLE_DRIVE_FILE_ID}/preview`;
 const pdfDownloadUrl = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;

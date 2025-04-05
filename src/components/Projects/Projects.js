@@ -271,7 +271,7 @@ function Projects() {
     <Col md={4} className="project-card">
       <ProjectCard
         imgPath={readnext}
-        title={<span className="glowing-title">ReadNext - Your Personalized Book Guide</span>}
+        title={<span className="glowing-title">ReadNext - Personalized Book Guide</span>}
         description={
           <>
             🤖 Refined a Machine Learning filtering model using Cosine Similarity and Sparse Matrix techniques to improve data efficiency and scalability. Built a preprocessing pipeline for 6,000+ records, eliminating delays and maximizing performance.
@@ -281,7 +281,7 @@ function Projects() {
             🎯 Skills: Managing Technical Personnel, Git, Database Analysis
           </>
         }
-        ghLink="https://github.com/SachinBhardwaj1"
+        ghLink="https://github.com/SachinBhardwaj1/ReadNext-Personalized-Book-Guide"
         demoLink=""
       />
     </Col>,
@@ -299,7 +299,7 @@ function Projects() {
             🎯 Skills: Docker, Git, Oracle SQL Developer, SQL Server Management Studio
           </>
         }
-        ghLink="https://github.com/SachinBhardwaj1"
+        ghLink="https://github.com/SachinBhardwaj1/TrackNScaleDB"
         demoLink=""
       />
     </Col>,
@@ -351,7 +351,7 @@ function Projects() {
             🎯 Skills: Node.js, Git, SQL, Big Data Analytics, Database Analysis
           </>
         }
-        ghLink="https://github.com/SachinBhardwaj1"
+        ghLink="https://github.com/SachinBhardwaj1/TurboMongo"
         demoLink=""
       />
     </Col>,
@@ -369,7 +369,7 @@ function Projects() {
             🎯 Skills: Data Analysis, Data Visualization, Python (Programming Language), Data Cleaning, Team Leadership, Database Analysis
           </>
         }
-        ghLink="https://github.com/SachinBhardwaj1"
+        ghLink="https://public.tableau.com/app/profile/sachin.bhardwaj2/viz/Project-DV_17331230444460/Dashboard1"
         demoLink=""
       />
     </Col>,
